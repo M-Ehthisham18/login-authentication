@@ -21,6 +21,27 @@ body, html {
   position: absolute;
   top: 0;
   left: 16px;
+  display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    p{
+      font-size: xxx-large;
+      font-weight: 800;
+      color:black;
+    }
+
+    button{
+      height:56px;
+      padding: 0px 24px;
+      font-size: xx-large;
+      border-radius: 8px;
+      background: #ffffffc4;
+    a{
+      text-decoration: none;
+    color: red;
+    }
+    }
 }
 
 .bottomleft {
@@ -35,6 +56,9 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  h1{
+    text-transform: uppercase;
+  }
 }
 
 hr {
@@ -47,11 +71,12 @@ hr {
 <div class="bgimg">
   <div class="topleft">
     <p>Logo</p>
+    <button><a href="{% url 'logout'%}">Logout</a></button>
   </div>
   <div class="middle">
-    <h1>COMING SOON</h1>
+    <h1> WELCOME {{user_name}}</h1>
     <hr>
-    <p>35 days left</p>
+    <p> Thank you for login to page</p>
   </div>
   <div class="bottomleft">
     <p>Some text</p>
